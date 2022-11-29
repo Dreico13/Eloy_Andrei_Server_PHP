@@ -3,7 +3,7 @@
 class Params
 {
     private array $query = array();
-    private array $params = array();
+    public $params = array();
     private mixed $value;
     private string $url;
 
@@ -11,12 +11,23 @@ class Params
     public function getParams(){
 
         if($_SERVER['REQUEST_METHOD'] == 'GET'){
-            echo 'Exito total hijoputa';
+           $this->url = htmlspecialchars($_SERVER['QUERY_STRING']);
+           $this->query = explode(htmlspecialchars('&'), $this->url);
+           
+           foreach($this->query as $key){
+                array_push($this->params,explode('=',$key));
+           }
+           
+           var_dump($this->params[0]);
+
+
         }else{
             echo 'comeme los huevos';
         }
                 
     }
 }
+
+
 
 ?>
