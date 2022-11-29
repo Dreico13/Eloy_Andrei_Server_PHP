@@ -11,7 +11,7 @@ class Params
     public function getParams(){
 
         if($_SERVER['REQUEST_METHOD'] == 'GET'){
-            echo 'Viene por get';
+            echo 'Exito total hijoputa';
         }else{
             echo 'comeme los huevos';
         }
