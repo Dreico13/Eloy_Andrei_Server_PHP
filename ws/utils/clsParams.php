@@ -13,7 +13,7 @@ class Params
         if($_SERVER['REQUEST_METHOD'] == 'GET'){
             echo 'Exito total hijoputa';
         }else{
-            echo 'comeme los huevos';
+            echo 'comeme los huevos y la polla';
         }
                 
     }
