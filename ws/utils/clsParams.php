@@ -11,6 +11,7 @@ class Params
     public function getParams(){
 
         if($_SERVER['REQUEST_METHOD'] == 'GET'){
+
            $this->url = htmlspecialchars($_SERVER['QUERY_STRING']);
            $this->query = explode(htmlspecialchars('&'), $this->url);
            
@@ -22,6 +23,7 @@ class Params
 
 
         }else{
+            
             echo 'comeme los huevos';
         }
                 
