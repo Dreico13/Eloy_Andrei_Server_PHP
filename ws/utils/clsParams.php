@@ -19,8 +19,6 @@ class Params
                 array_push($this->params,explode('=',$key));
            }
            
-           var_dump($this->params[0]);
-
 
         }else{
             
